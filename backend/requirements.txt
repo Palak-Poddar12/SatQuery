@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-multipart
+slowapi
+Pillow
+python-magic-bin
+pydantic-settings
+structlog
