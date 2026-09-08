@@ -119,6 +119,10 @@ def vqa_dtype_contract():
 def vqa_loss_contract():
     processor, model = registry.load_vqa()
     inputs = processor(rgb(), "test", return_tensors="pt")
+    inputs = {
+        key: value.to(DEVICE) if hasattr(value, "to") else value
+        for key, value in inputs.items()
+    }
     inputs["labels"] = inputs["input_ids"].clone()
     with pipeline.torch.inference_mode():
         outputs = model(**inputs)
