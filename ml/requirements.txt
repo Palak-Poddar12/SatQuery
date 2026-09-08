@@ -11,3 +11,10 @@ fastapi>=0.104.0
 uvicorn>=0.24.0
 python-multipart>=0.0.6
 pyngrok>=7.0.0
+deep-translator>=1.11.4
+langdetect>=1.0.9
+openai-whisper>=20231117
+gTTS>=2.5.1
+# ffmpeg must be installed via: apt-get install ffmpeg   (Colab/Linux)
+#                                winget install FFmpeg     (Windows, VSCode)
+#                                brew install ffmpeg       (Mac, VSCode)
