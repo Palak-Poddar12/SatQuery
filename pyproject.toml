@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rs-llava-bigearthnet"
+version = "0.1.0"
+description = "QLoRA fine-tuning and evaluation pipeline for RS-LLaVA on BigEarthNet single-image VQA"
+requires-python = ">=3.10"
+dependencies = [
+  "accelerate>=0.30",
+  "bitsandbytes>=0.43; platform_system != 'Windows'",
+  "datasets>=2.19",
+  "fastapi>=0.115",
+  "pillow>=10.0",
+  "peft>=0.11",
+  "safetensors>=0.4",
+  "torch>=2.2",
+  "transformers>=4.40,<5",
+  "uvicorn[standard]>=0.30",
+]
+
+[project.scripts]
+ben-prepare = "rs_llava_ben.prepare_data:main"
+ben-train = "rs_llava_ben.train:main"
+ben-evaluate = "rs_llava_ben.evaluate:main"
+ben-infer = "rs_llava_ben.infer:main"
+ben-api = "rs_llava_ben.api:run"
+ben-caption = "rs_llava_ben.captioning:run_caption"
+
+[tool.setuptools.packages.find]
+where = ["src"]

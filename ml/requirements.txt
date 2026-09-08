@@ -1,0 +1,13 @@
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.35.0
+accelerate>=0.24.0
+open-clip-torch>=2.20.0
+Pillow>=10.0.0
+sentencepiece>=0.1.99
+einops>=0.7.0
+numpy>=1.24.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+python-multipart>=0.0.6
+pyngrok>=7.0.0

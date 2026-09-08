@@ -1,0 +1,8 @@
+torch
+open-clip-torch
+fastapi
+uvicorn
+pydantic
+pillow
+anthropic
+requests
