@@ -15,3 +15,27 @@ dist/
 .DS_Store
 rs-env/
 models/.git_nested_backup/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Environment / secrets
+.env
+*.env
+
+# Runtime data
+uploads/
+logs/
+
+# Backend
+backend/.venv/
+backend/__pycache__/
+
+# Frontend
+frontend/node_modules/
+
+# IDE
+.vscode/
+.idea/
