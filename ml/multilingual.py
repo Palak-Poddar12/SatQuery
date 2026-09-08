@@ -125,12 +125,22 @@ def translate_to_english(text: str, src_lang: str = "auto") -> dict:
         }
     """
     if not text or not text.strip():
-        return {"text_english": text, "detected_language": "en", "was_translated": False}
+        return {
+            "text_english": text,
+            "original": text,
+            "detected_language": "en",
+            "was_translated": False,
+        }
 
     detected = detect_language(text) if src_lang == "auto" else src_lang
 
     if detected == "en":
-        return {"text_english": text, "detected_language": "en", "was_translated": False}
+        return {
+            "text_english": text,
+            "original": text,
+            "detected_language": "en",
+            "was_translated": False,
+        }
 
     try:
         translated = GoogleTranslator(source=detected, target="en").translate(text)
@@ -141,6 +151,7 @@ def translate_to_english(text: str, src_lang: str = "auto") -> dict:
 
     return {
         "text_english": translated if translated else text,
+        "original": text,
         "detected_language": detected,
         "was_translated": True,
     }

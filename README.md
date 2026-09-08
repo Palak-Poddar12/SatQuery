@@ -24,6 +24,14 @@ VQA | Caption | Grounding | Change Detection | Optical-SAR Fusion
   !pip install -r ml/requirements.txt
   # Phir ml/cell_6_agent.py run karo
 
+## Prerequisites
+
+FFmpeg is required for the voice/STT integration tests.
+
+- Windows: `winget install Gyan.FFmpeg`
+- Linux/Colab: `apt-get install ffmpeg`
+- macOS: `brew install ffmpeg`
+
 ---
 
 ## Coder 3 - Backend Setup (Local)
